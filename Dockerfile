@@ -2,12 +2,10 @@ FROM jayofdoom/docker-ubuntu-14.04
 
 MAINTAINER Nicolas Delaby <nicolas.delaby@ezeep.com>
 
-RUN apt-get -y update
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
-RUN apt-get -y update
+RUN echo "deb http://archive.ubuntu.com/ubuntu raring main universe" >> /etc/apt/sources.lists
+RUN apt-get -y update && apt-get install -y -q nginx nginx-extras
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN apt-get install -y -q nginx nginx-extras
 VOLUME /var/log/nginx
 VOLUME /etc/nginx/
 
