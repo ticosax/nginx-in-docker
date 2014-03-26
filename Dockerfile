@@ -1,4 +1,4 @@
-FROM jayofdoom/docker-ubuntu-14.04
+FROM ticosax/docker-ubuntu-14.04
 
 MAINTAINER Nicolas Delaby <nicolas.delaby@ezeep.com>
 
