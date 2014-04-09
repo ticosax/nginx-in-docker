@@ -1,4 +1,4 @@
-FROM ticosax/docker-ubuntu-14.04
+FROM debian:sid
 
 MAINTAINER Nicolas Delaby <nicolas.delaby@ezeep.com>
 
