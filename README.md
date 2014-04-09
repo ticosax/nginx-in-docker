@@ -1,4 +1,4 @@
 nginx-in-docker
 ===============
 
-Latest nginx on ubuntu 14.04
+Latest nginx on debian:sid
