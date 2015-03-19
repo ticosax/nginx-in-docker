@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:jessie
 
 MAINTAINER Nicolas Delaby <nicolas.delaby@ezeep.com>
 
