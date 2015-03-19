@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Nicolas Delaby <nicolas.delaby@ezeep.com>
+MAINTAINER Nicolas Delaby <ticosax@free.fr>
 
 RUN apt-get -y update &&\
     apt-get install -y -q nginx nginx-extras &&\
