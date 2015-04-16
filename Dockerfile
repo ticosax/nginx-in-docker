@@ -3,7 +3,7 @@ FROM debian:jessie
 MAINTAINER Nicolas Delaby <ticosax@free.fr>
 
 RUN apt-get -y update &&\
-    apt-get install -y -q nginx nginx-extras &&\
+    apt-get install -y -q nginx nginx-extras ca-certificates &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
