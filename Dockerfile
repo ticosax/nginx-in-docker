@@ -1,11 +1,10 @@
-FROM debian:jessie
+FROM alpine:edge
 
 MAINTAINER Nicolas Delaby <ticosax@free.fr>
 
-RUN apt-get -y update &&\
-    apt-get install -y -q nginx nginx-extras ca-certificates &&\
-    apt-get clean &&\
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --update nginx ca-certificates
+
+RUN echo -n "daemon off;" >> /etc/nginx/nginx.conf
 
 VOLUME /var/log/nginx
 VOLUME /etc/nginx/
